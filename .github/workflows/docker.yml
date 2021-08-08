@@ -1,8 +1,11 @@
 name: Docker
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - master
+    tags:
+      - 'v*'
 
 jobs:
   deploy-docker-hub:
